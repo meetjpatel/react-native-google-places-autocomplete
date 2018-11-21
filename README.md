@@ -7,7 +7,7 @@ Customizable Google Places autocomplete component for iOS and Android React-Nati
 
 ### Installation
 
-1. ```npm install react-native-google-places-autocomplete --save```
+1. ```npm install meetjpatel/react-native-google-places-autocomplete --save```
 2. Get your [Google Places API keys](https://developers.google.com/places/documentation/) and enable "Google Places API Web Service" (NOT Android or iOS) in the console.
 3. Enable "Google Maps Geocoding API" if you want to use GoogleReverseGeocoding for Current Location
 
@@ -34,16 +34,16 @@ const GooglePlacesInput = () => {
       onPress={(data, details = null) => { // 'details' is provided when fetchDetails = true
         console.log(data, details);
       }}
-      
+
       getDefaultValue={() => ''}
-      
+
       query={{
         // available options: https://developers.google.com/places/web-service/autocomplete
         key: 'YOUR API KEY',
         language: 'en', // language of the results
         types: '(cities)' // default: 'geocode'
       }}
-      
+
       styles={{
         textInputContainer: {
           width: '100%'
@@ -55,7 +55,7 @@ const GooglePlacesInput = () => {
           color: '#1faadb'
         }
       }}
-      
+
       currentLocation={true} // Will add a 'Current location' button at the top of the predefined places list
       currentLocationLabel="Current location"
       nearbyPlacesAPI='GooglePlacesSearch' // Which API to use: GoogleReverseGeocoding or GooglePlacesSearch
